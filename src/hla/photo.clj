@@ -14,7 +14,13 @@
   []
   (.getHeight image))
 
-(def pixels
+(defn pixels
   []
   (imagez/get-pixels image))
 
+(defn set-pixel-map
+"Returns hash of pixels as keys and counts as values"
+  []
+  (apply merge (map #(hash-map % 0) pixels)))
+
+(def pixel-map set-pixel-map)
