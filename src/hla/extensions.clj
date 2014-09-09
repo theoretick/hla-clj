@@ -1,3 +1,3 @@
 (ns hla.extensions)
 
-(def bar "foo")
+(def extensions [])

@@ -1,10 +1,11 @@
 # hla
 
-A Clojure library designed to ... well, that part is up to you.
+## TODO
 
-## Usage
-
-FIXME
+ * base extension piping
+ * base extension functionality
+ * config options
+ * filename input
 
 ## License
 

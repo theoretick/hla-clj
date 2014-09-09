@@ -1,5 +1,6 @@
 (ns hla.photo
-  (:require [mikera.image.core :as imagez]))
+  (:require [mikera.image.core :as imagez]
+            [mikera.image.colours :as colours]))
 
 (def foo "bar")
 
@@ -16,11 +17,8 @@
 
 (defn pixels
   []
-  (imagez/get-pixels image))
+  (map colours/components-argb (imagez/get-pixels image)))
 
-(defn set-pixel-map
-"Returns hash of pixels as keys and counts as values"
-  []
-  (apply merge (map #(hash-map % 0) pixels)))
+;; Hash of pixels as keys and counts as values
+(def pixel-map (frequencies (pixels)))
 
-(def pixel-map set-pixel-map)
