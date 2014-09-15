@@ -2,8 +2,6 @@
   (:require [mikera.image.core :as imagez]
             [mikera.image.colours :as colours]))
 
-(def foo "bar")
-
 (def image
   (imagez/load-image-resource "fixtures/medium_019d54ad-5db7-4bcd-9a73-580b5fed1c71.jpg"))
 
@@ -21,4 +19,7 @@
 
 ;; Hash of pixels as keys and counts as values
 (def pixel-map (frequencies (pixels)))
+
+;; All colors present in image
+(def colors (keys pixel-map))
 
